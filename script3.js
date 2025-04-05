@@ -1,3 +1,5 @@
+// Manipulasi Element
+
 // innerHTML
 // const judul = document.getElementById("judul");
 // judul.innerHTML = "<em>Irham Sidi</em>";
