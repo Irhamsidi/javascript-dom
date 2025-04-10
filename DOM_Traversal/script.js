@@ -26,5 +26,6 @@ const close = document.querySelectorAll(".close");
 close.forEach((element) => {
   element.addEventListener("click", function (event) {
     event.target.parentElement.style.display = "none";
+    event.preventDefault();
   });
 });
