@@ -13,7 +13,7 @@
 //
 // DOM Traversal
 //
-const close = document.querySelectorAll(".close");
+// const close = document.querySelectorAll(".close");
 
 // for (let i = 0; i < close.length; i++) {
 //   close[i].addEventListener("click", function (event) {
@@ -23,9 +23,28 @@ const close = document.querySelectorAll(".close");
 // }
 
 // Menggunakan forEach dan arrow function
-close.forEach((element) => {
-  element.addEventListener("click", function (event) {
-    event.target.parentElement.style.display = "none";
-    event.preventDefault();
-  });
+// close.forEach((element) => {
+//   element.addEventListener("click", function (event) {
+//     event.target.parentElement.style.display = "none";
+//     event.preventDefault(); // Untuk menghentikan fungsi default sebuah element
+//     event.stopPropagation(); // Untuk menghentikan event bubbling
+//   });
+// });
+
+// const cards = document.querySelectorAll(".card");
+// cards.forEach((card) => {
+//   card.addEventListener("click", function () {
+//     alert("ok");
+//   });
+// });
+
+//
+// Event Bubbling
+//
+const container = document.querySelector(".container");
+container.addEventListener("click", function (e) {
+  if (e.target.className == "close") {
+    e.target.parentElement.style.display = "none";
+    e.preventDefault();
+  }
 });
